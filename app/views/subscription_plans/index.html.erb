@@ -1,0 +1,11 @@
+<h1>Listing subscription_plans</h1>
+
+
+<% @subscription_plans.each do |subscription_plan| %>
+  	<%= subscription_plan.id %>
+    <%= subscription_plan.amount %>
+    <%= subscription_plan.description %>
+    <%= link_to 'Subscribe', "/subscriptions/new?subscription_plan_id=#{subscription_plan.id}" %>
+  	<br />
+<% end %>
+
